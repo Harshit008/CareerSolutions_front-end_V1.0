@@ -1,0 +1,39 @@
+<div class="bootstrap wrapper">
+    
+    <div class="container mt">
+        
+        <div class="container text-center form-group">
+            <img class="img-fluid" style="width: 200px" src="/assets/images/logo.jpg" alt="" srcset="">
+        </div>
+            <div class="text-center">
+                
+                <h1>Recruiter Login Page</h1>
+                    <form (ngSubmit)="onSubmit()">
+
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Username</mat-label>
+
+                            <input [(ngModel)]="recruiter_credentials.username"
+                            required name="username" type="text" matInput/><br>
+
+                        </mat-form-field><br>
+
+                        <mat-form-field class="full-width"  appearance="outline">
+
+                            <mat-label>Password</mat-label>
+
+                            <input [(ngModel)]="recruiter_credentials.password"
+                             required  name="password" type="password" matInput/><br> 
+
+                        </mat-form-field><br>
+                        <button mat-raised-button color="accent" type="submit">Login</button>
+                        <button mat-raised-button style="margin-left: 20px" color="accent" type="button" onClick={recruiterSignUpPage}>SignUp</button>
+                    </form><br>
+                   <p> {{recruiter_credentials | json}}</p>
+            </div> 
+        </div>
+</div>
+
+
+
+
