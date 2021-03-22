@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoginService } from 'src/app/services/login.service';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +13,7 @@ export class LoginComponent implements OnInit {
     password: ''
   }
 
-  constructor() { }
+  constructor(private loginService: LoginService) { }
 
   ngOnInit(): void {
   }
@@ -20,9 +21,19 @@ export class LoginComponent implements OnInit {
       
       if((this.recruiter_credentials.username!='' && this.recruiter_credentials.password!='')&& (this.recruiter_credentials.username!=null && this.recruiter_credentials.password!=null))
       {
-        console.log("we have to submit the form");
+          this.loginService.generateToken(this.recruiter_credentials).subscribe(
+              (response:any) =>{
+                        console.log(response.authenticationToken);
+                        this.loginService.loginRecruiter(response.authenticationToken);
+              },
+              error=>{
+                        console.log(error);
+              }
+          )
       }else{
         console.log("Fields are empty");
       }
   }
 }
+
+
