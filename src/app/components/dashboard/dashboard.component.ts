@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Jobs } from "./Jobs";
+import { Jobs } from "src/app/Jobs";
 import { JobServiceService } from "src/app/services/jobService/job-service.service";
 @Component({
   selector: 'app-dashboard',

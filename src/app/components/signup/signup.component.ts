@@ -8,18 +8,18 @@ import { SignupserviceService } from "src/app/services/signup/signupservice.serv
 export class SignupComponent implements OnInit {
 
   recruiter_details={
+    recruiterName: '',
     username: '',
     password: '',
-    email: '',
-    name: ''
-  }
+    email: ''
+}
   constructor(private signupService:SignupserviceService) { }
 
   ngOnInit(): void {
   }
 
   onSubmit(){
-    if((this.recruiter_details.username!='' && this.recruiter_details.password!='' && this.recruiter_details.name!='' && this.recruiter_details.email!='')&& (this.recruiter_details.username!=null && this.recruiter_details.password!=null && this.recruiter_details.name!=null && this.recruiter_details.email!=null ))
+    if((this.recruiter_details.username!='' && this.recruiter_details.password!='' && this.recruiter_details.recruiterName!='' && this.recruiter_details.email!='')&& (this.recruiter_details.username!=null && this.recruiter_details.password!=null && this.recruiter_details.recruiterName!=null && this.recruiter_details.email!=null ))
     {
             this.signupService.registerrecruiter(this.recruiter_details).subscribe(
               response=>{
