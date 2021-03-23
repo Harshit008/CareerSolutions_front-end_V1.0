@@ -7,6 +7,7 @@ import {JobseekerloginComponent} from './components/jobseekerlogin/jobseekerlogi
 import { AuthGuard } from './services/auth.guard';
 import { SignupComponent } from './components/signup/signup.component';
 import { SuccessComponent } from './components/success/success.component';
+import { EditJobComponent } from './components/dashboard/edit-job/edit-job.component';
 const routes: Routes = [
   {
     path:'',
@@ -37,6 +38,11 @@ const routes: Routes = [
   {
     path:'success',
     component:SuccessComponent,
+    pathMatch:'full'
+  },
+  {
+    path:'editJob',
+    component: EditJobComponent,
     pathMatch:'full'
   }
   

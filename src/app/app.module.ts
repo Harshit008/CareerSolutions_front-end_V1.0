@@ -17,6 +17,7 @@ import { FormsModule } from '@angular/forms';
 import {  HttpClientModule } from '@angular/common/http';
 import { SignupComponent } from './components/signup/signup.component';
 import { SuccessComponent } from './components/success/success.component';
+import { EditJobComponent } from './components/dashboard/edit-job/edit-job.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +27,8 @@ import { SuccessComponent } from './components/success/success.component';
     DashboardComponent,
     JobseekerloginComponent,
     SignupComponent,
-    SuccessComponent   
+    SuccessComponent,
+    EditJobComponent   
    
   ],
   imports: [
