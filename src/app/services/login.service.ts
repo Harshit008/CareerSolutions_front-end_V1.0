@@ -22,6 +22,10 @@ generateToken(recruiter_credentials:any) {
     return true;
   }
 
+  storeUsername(username){
+    localStorage.setItem("username",username);
+  }
+
   isLoggedIn(){
 
       let token=localStorage.getItem("token");

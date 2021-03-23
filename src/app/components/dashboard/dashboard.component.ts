@@ -9,12 +9,13 @@ import { JobServiceService } from "src/app/services/jobService/job-service.servi
 export class DashboardComponent implements OnInit {
   public jobs: Jobs[];
   constructor(private jobservice: JobServiceService) { }
-
+  public username: string;
   ngOnInit() {
-      this.getJobs();
+      this.username=localStorage.getItem('username');
+      this.getJobs(this.username);
   }
-  public getJobs(): void {
-      this.jobservice.getJobs().subscribe(
+  public getJobs(username:string): void {
+      this.jobservice.getJobs(username).subscribe(
         (response:Jobs[]) => {
           this.jobs=response;
         },

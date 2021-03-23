@@ -9,7 +9,7 @@ export class JobServiceService {
   apiurl="http://localhost:9999/myapp";
   constructor(private http:HttpClient) { }
   
-  public getJobs(): Observable<Jobs[]> {
-    return this.http.get<Jobs[]>(`${this.apiurl}/getJobs`);
+  public getJobs(username:string): Observable<Jobs[]> {
+    return this.http.get<Jobs[]>(`${this.apiurl}/getJobs/${username}`);
   }
 }
