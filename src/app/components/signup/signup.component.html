@@ -1,0 +1,58 @@
+<div class="bootstrap wrapper">
+    
+    <div class="container mt">
+        
+        <div class="container text-center form-group">
+            <img class="img-fluid" style="width: 200px" src="/assets/images/logo.jpg" alt="" srcset="">
+        </div>
+            <div class="text-center">
+                
+                <h1>Recruiter Signup Page</h1>
+                    <form (ngSubmit)="onSubmit()">
+
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Name</mat-label>
+
+                            <input [(ngModel)]="recruiter_details.name"
+                            required name="name" type="text" matInput/><br>
+
+                        </mat-form-field><br>
+
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Username</mat-label>
+
+                            <input [(ngModel)]="recruiter_details.username"
+                            required name="username" type="text" matInput/><br>
+
+                        </mat-form-field><br>
+
+                        <mat-form-field class="full-width"  appearance="outline">
+
+                            <mat-label>Password</mat-label>
+
+                            <input [(ngModel)]="recruiter_details.password"
+                             required  name="password" type="password" matInput/><br> 
+
+                        </mat-form-field><br>
+
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Email</mat-label>
+
+                            <input [(ngModel)]="recruiter_details.email"
+                            required name="email" type="text" matInput/><br>
+
+                        </mat-form-field><br>
+
+                       
+
+                        <button mat-raised-button color="accent" type="submit">Register</button>
+                        <button mat-raised-button color="accent"  type="reset">Reset</button>
+                    </form><br>
+                   <p> {{recruiter_details | json}}</p>
+            </div> 
+        </div>
+</div>
+
+
+
+

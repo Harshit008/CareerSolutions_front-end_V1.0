@@ -25,6 +25,7 @@ export class LoginComponent implements OnInit {
               (response:any) =>{
                         console.log(response.authenticationToken);
                         this.loginService.loginRecruiter(response.authenticationToken);
+                        window.location.href="/dashboard";
               },
               error=>{
                         console.log(error);
