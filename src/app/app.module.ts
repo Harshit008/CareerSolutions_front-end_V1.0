@@ -18,6 +18,7 @@ import {  HttpClientModule } from '@angular/common/http';
 import { SignupComponent } from './components/signup/signup.component';
 import { SuccessComponent } from './components/success/success.component';
 import { EditJobComponent } from './components/dashboard/edit-job/edit-job.component';
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,6 +42,7 @@ import { EditJobComponent } from './components/dashboard/edit-job/edit-job.compo
     MatInputModule,
     FormsModule,
     HttpClientModule,
+    ReactiveFormsModule
 
   ],
   providers: [],

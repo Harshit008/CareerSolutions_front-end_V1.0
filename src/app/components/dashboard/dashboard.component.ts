@@ -16,13 +16,15 @@ export class DashboardComponent implements OnInit {
   }
   public deleteJob(jobId:string){
     console.log(jobId);
+     
     this.jobservice.deleteJob(jobId).subscribe(
       response=>{
         console.log(response);
-        window.location.href="dashboard";
+        
       },
       error=>{
         console.log(error);
+        window.location.href="dashboard";
       }
     );
    
@@ -37,4 +39,11 @@ export class DashboardComponent implements OnInit {
         }
       )
   }
+
+  public editJob(jobId:string){
+    console.log(jobId);
+    localStorage.setItem('jobId',jobId);
+   
+  }
+
 }

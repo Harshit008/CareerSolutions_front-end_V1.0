@@ -31,7 +31,7 @@
                        <td>{{job.experienceInYears}}</td>
                        <td>{{job.education}}</td>
                        <td colspan="2">
-                        <button type="button" class="btn btn-primary btn-sm" routerLink="/editJob">Edit</button>
+                        <button type="button" class="btn btn-primary btn-sm" routerLink="/editJob" (click)="editJob(job.jobId)">Edit</button>
                         <button type="button" style="margin-left: 10px;" class="btn btn-primary btn-sm" (click)="deleteJob(job.jobId)">Delete</button>
                        </td>
 

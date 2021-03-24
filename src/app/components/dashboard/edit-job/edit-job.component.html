@@ -1,18 +1,46 @@
 <div class="bootstrap wrapper">
-    
-    <div class="container mt">
-        
-        <div class="container text-center form-group">
-        Edit works
-        </div>
-            <div class="text-center">
-              
-               
-                 
-            </div> 
-        </div>
+
+  <div class="container mt">
+
+    <div class="container text-center form-group">
+      Edit works
+    </div>
+    <div class="text-left">
+
+      <form *ngIf="jobs" [formGroup]="form" (ngSubmit)="submit()">
+
+        <label for="jobTitle">Job Title</label>
+        <input id="jobTitle" formControlName="jobTitle" />
+        <div *ngIf="form.controls.jobTitle.errors?.required && form.controls.jobTitle.touched" class="error">
+        </div><br>
+        <label for="jobDesc">Job Description</label>
+        <input id="jobDesc" formControlName="jobDesc" />
+        <div *ngIf="form.controls.jobDesc.errors?.required && form.controls.jobDesc.touched" class="error">
+        </div><br>
+
+        <label for="jobField">Job Field</label>
+        <input id="jobField" formControlName="jobField" />
+        <div *ngIf="form.controls.jobField.errors?.required && form.controls.jobField.touched" class="error">
+        </div><br>
+        <label for="employementType">Employement Type</label>
+        <input id="employementType" formControlName="employementType" />
+        <div *ngIf="form.controls.employementType.errors?.required && form.controls.employementType.touched" class="error">
+        </div><br>
+        <label for="ctc">CTC</label>
+        <input id="ctc" formControlName="ctc" />
+        <div *ngIf="form.controls.ctc.errors?.required && form.controls.ctc.touched" class="error">
+        </div><br>
+        <label for="experienceInYears">Experience In Years</label>
+        <input id="experienceInYears" formControlName="experienceInYears" />
+        <div *ngIf="form.controls.experienceInYears.errors?.required && form.controls.experienceInYears.touched" class="error">
+        </div><br>
+        <label for="education">Education</label>
+        <input id="education" formControlName="education" />
+        <div *ngIf="form.controls.education.errors?.required && form.controls.education.touched" class="error">
+        </div><br>
+        <button mat-raised-button color="accent" type="submit">Save</button>  
+      </form>
+
+    </div>
+  </div>
 </div>
-
-
-
-

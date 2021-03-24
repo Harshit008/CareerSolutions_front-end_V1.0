@@ -17,4 +17,14 @@ export class JobServiceService {
       console.log(jobId);
       return this.http.delete(`${this.apiurl}/deleteJob/${jobId}`);
   }
+
+  public getJob(jobId:string): Observable<Jobs>{
+    return this.http.get<Jobs>(`${this.apiurl}/getJob/${jobId}`);
+
+  }
+
+  public updateJob(jobId:string, username:string,job:Jobs): Observable<Jobs>{
+    return this.http.put<Jobs>(`${this.apiurl}/updateJob/${jobId}/${username}`,job);
+  }
+
 }
