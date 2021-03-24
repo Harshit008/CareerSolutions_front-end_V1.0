@@ -12,4 +12,9 @@ export class JobServiceService {
   public getJobs(username:string): Observable<Jobs[]> {
     return this.http.get<Jobs[]>(`${this.apiurl}/getJobs/${username}`);
   }
+
+  public deleteJob(jobId:string):Observable<any> {
+      console.log(jobId);
+      return this.http.delete(`${this.apiurl}/deleteJob/${jobId}`);
+  }
 }

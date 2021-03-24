@@ -14,6 +14,19 @@ export class DashboardComponent implements OnInit {
       this.username=localStorage.getItem('username');
       this.getJobs(this.username);
   }
+  public deleteJob(jobId:string){
+    console.log(jobId);
+    this.jobservice.deleteJob(jobId).subscribe(
+      response=>{
+        console.log(response);
+        window.location.href="dashboard";
+      },
+      error=>{
+        console.log(error);
+      }
+    );
+   
+  }
   public getJobs(username:string): void {
       this.jobservice.getJobs(username).subscribe(
         (response:Jobs[]) => {
