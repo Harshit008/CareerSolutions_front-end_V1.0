@@ -44,12 +44,14 @@ const routes: Routes = [
   {
     path:'editJob',
     component: EditJobComponent,
-    pathMatch:'full'
+    pathMatch:'full',
+    canActivate:[AuthGuard]
   },
   {
     path:'postJob',
     component: PostJobComponent,
-    pathMatch:'full'
+    pathMatch:'full',
+    canActivate:[AuthGuard]
   }
   
 ];

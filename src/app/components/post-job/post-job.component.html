@@ -3,9 +3,9 @@
     <div class="container mt">
         
         <div class="container form-group">
-            <h1>Post New Job</h1>
+           
             
-                <form (ngSubmit)="onSubmit()">
+                <!-- <form (ngSubmit)="onSubmit()">
                     <div class="form-group">
                       <label for="jobTitle">Job Title</label>
                       <input  [(ngModel)]="jobs.jobTitle"
@@ -51,10 +51,10 @@
         
         </div>
     </div>
-</div>
-<!--             
-        </div>
-            <div class="text-center">
+</div> -->
+            
+        
+            <div class="margin-left">
                 
                 <h1>Post New Job</h1>
                     <form (ngSubmit)="onSubmit()">
@@ -62,7 +62,7 @@
                         <mat-form-field class="full-width" appearance="outline">
                             <mat-label>Job Title</mat-label>
 
-                            <input [(ngModel)]="jobs.jobTitle"
+                            <input [(ngModel)]="jobs_details.jobTitle"
                             required name="jobTitle" type="text" matInput/><br>
 
                         </mat-form-field><br>
@@ -70,7 +70,7 @@
                         <mat-form-field class="full-width" appearance="outline">
                             <mat-label>Job Description</mat-label>
 
-                            <input [(ngModel)]="jobs.jobDesc"
+                            <input [(ngModel)]="jobs_details.jobDesc"
                             required name="jobDesc" type="text" matInput/><br>
 
                         </mat-form-field><br>
@@ -79,7 +79,7 @@
 
                             <mat-label>Job Field</mat-label>
 
-                            <input [(ngModel)]="jobs.jobField"
+                            <input [(ngModel)]="jobs_details.jobField"
                              required  name="jobField" type="text" matInput/><br> 
 
                         </mat-form-field><br>
@@ -87,7 +87,7 @@
                         <mat-form-field class="full-width" appearance="outline">
                             <mat-label>Employement Type</mat-label>
 
-                            <input [(ngModel)]="jobs.employementType"
+                            <input [(ngModel)]="jobs_details.employementType"
                             required name="employementType" type="text" matInput/><br>
 
                         </mat-form-field><br>
@@ -95,7 +95,7 @@
                         <mat-form-field class="full-width" appearance="outline">
                             <mat-label>CTC</mat-label>
 
-                            <input [(ngModel)]="jobs.ctc"
+                            <input [(ngModel)]="jobs_details.ctc"
                             required name="ctc" type="number" matInput/><br>
 
                         </mat-form-field><br>
@@ -103,7 +103,7 @@
                         <mat-form-field class="full-width" appearance="outline">
                             <mat-label>Experience In Years</mat-label>
 
-                            <input [(ngModel)]="jobs.experienceInYears"
+                            <input [(ngModel)]="jobs_details.experienceInYears"
                             required name="experienceInYears" type="number" matInput/><br>
 
                         </mat-form-field><br>
@@ -111,7 +111,7 @@
                         <mat-form-field class="full-width" appearance="outline">
                             <mat-label>Education</mat-label>
 
-                            <input [(ngModel)]="jobs.education"
+                            <input [(ngModel)]="jobs_details.education"
                             required name="education" type="text" matInput/><br>
 
                         </mat-form-field><br>
@@ -119,12 +119,13 @@
                        
 
                         <button mat-raised-button color="accent" type="submit">Post Job</button>
-                        <button mat-raised-button color="accent"  type="reset">Reset</button>
-                    </form><br> -->
-                   <p> {{jobs | json}}</p>
-            <!-- </div> 
+                        <button mat-raised-button color="accent" style="margin-left: 20px;" type="reset">Reset</button>
+                    </form><br> 
+                   
+                  </div>
+            </div> 
         </div>
-</div> -->
+</div>
 
 
 

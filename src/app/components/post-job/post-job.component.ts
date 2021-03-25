@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Jobs } from "src/app/Jobs";
 import { JobServiceService } from 'src/app/services/jobService/job-service.service';
 @Component({
   selector: 'app-post-job',
@@ -7,20 +6,28 @@ import { JobServiceService } from 'src/app/services/jobService/job-service.servi
   styleUrls: ['./post-job.component.css']
 })
 export class PostJobComponent implements OnInit {
-  public jobs: Jobs;
+  jobs_details={
+    jobTitle: '',
+    jobDesc: '',
+    jobField: '',
+    employementType: '',
+    ctc: '',
+    experienceInYears: '',
+    education: ''
+}
   constructor(private jobservice:JobServiceService) { }
 
   ngOnInit(): void {
   }
   onSubmit(){
-    if((this.jobs.jobTitle!='' && this.jobs.jobField!='' && this.jobs.jobDesc!='' && this.jobs.employementType!='' && this.jobs.experienceInYears!=0 && this.jobs.education!=''&& this.jobs.ctc!=0 )&& (this.jobs.jobTitle!=null  && this.jobs.jobField!=null && this.jobs.jobDesc!=null && this.jobs.employementType!=null && this.jobs.experienceInYears!=0 && this.jobs.education!=null && this.jobs.ctc!=0 ))
+    if((this.jobs_details.jobTitle!='' && this.jobs_details.jobField!='' && this.jobs_details.jobDesc!='' && this.jobs_details.employementType!='' && this.jobs_details.experienceInYears!='' && this.jobs_details.education!=''&& this.jobs_details.ctc!='' )&& (this.jobs_details.jobTitle!=null  && this.jobs_details.jobField!=null && this.jobs_details.jobDesc!=null && this.jobs_details.employementType!=null && this.jobs_details.experienceInYears!=null && this.jobs_details.education!=null && this.jobs_details.ctc!=null ))
     {
-            console.log(this.jobs)
-            this.jobservice.postJob(localStorage.getItem('username'),this.jobs).subscribe(
+            console.log(this.jobs_details)
+            this.jobservice.postJob(localStorage.getItem('username'),this.jobs_details).subscribe(
               response=>{
                 console.log(response);
                     
-                //window.location.href="/dashboard";
+                window.location.href="/dashboard";
               },
               error=>{
                 console.log(error);
