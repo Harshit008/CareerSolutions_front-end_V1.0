@@ -19,6 +19,7 @@ import { SignupComponent } from './components/signup/signup.component';
 import { SuccessComponent } from './components/success/success.component';
 import { EditJobComponent } from './components/dashboard/edit-job/edit-job.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { PostJobComponent } from './components/post-job/post-job.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +30,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     JobseekerloginComponent,
     SignupComponent,
     SuccessComponent,
-    EditJobComponent   
+    EditJobComponent,
+    PostJobComponent   
    
   ],
   imports: [

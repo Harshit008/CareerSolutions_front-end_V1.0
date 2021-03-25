@@ -27,4 +27,8 @@ export class JobServiceService {
     return this.http.put<Jobs>(`${this.apiurl}/updateJob/${jobId}/${username}`,job);
   }
 
+  public postJob(username:string,job:Jobs): Observable<Jobs>{
+    return this.http.post<Jobs>(`${this.apiurl}/insertJob/${username}`,job);
+  }
+
 }

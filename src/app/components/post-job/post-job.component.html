@@ -1,0 +1,132 @@
+<div class="bootstrap wrapper">
+    
+    <div class="container mt">
+        
+        <div class="container form-group">
+            <h1>Post New Job</h1>
+            
+                <form (ngSubmit)="onSubmit()">
+                    <div class="form-group">
+                      <label for="jobTitle">Job Title</label>
+                      <input  [(ngModel)]="jobs.jobTitle"
+                      required name="jobTitle" type="text" class="form-control" placeholder="Enter Job Title">
+                    </div>
+                    <div class="form-group">
+                      <label for="jobField">Job Field</label>
+                      <input  [(ngModel)]="jobs.jobField"
+                      required name="jobField" type="text" class="form-control"  placeholder="Job Field">
+                    </div>
+                    <div class="form-group">
+                        <label for="jobDesc">Job Description</label>
+                        <input  [(ngModel)]="jobs.jobDesc"
+                        required name="jobDesc" type="text" class="form-control" placeholder="Job Description">
+                      </div>
+
+                      <div class="form-group">
+                        <label for="employementType">Employement Type</label>
+                        <input  [(ngModel)]="jobs.employementType"
+                        required name="employementType" type="text" class="form-control" placeholder="Employement Type">
+                      </div>
+                      
+                      <div class="form-group">
+                        <label for="ctc">CTC</label>
+                        <input  [(ngModel)]="jobs.ctc"
+                        required name="ctc" type="number" class="form-control" placeholder="CTC">
+                      </div>
+
+                      <div class="form-group">
+                        <label for="experienceInYears">Experience InYears</label>
+                        <input  [(ngModel)]="jobs.experienceInYears"
+                        required name="experienceInYears" type="number" class="form-control" placeholder="Experience In Years">
+                      </div>
+                     
+                      <div class="form-group">
+                        <label for="education">Education</label>
+                        <input  [(ngModel)]="jobs.education"
+                        required name="education" type="text" class="form-control" placeholder="Education">
+                      </div>
+                      
+                    <button type="submit" class="btn btn-primary">Post</button>
+                  </form>
+        
+        </div>
+    </div>
+</div>
+<!--             
+        </div>
+            <div class="text-center">
+                
+                <h1>Post New Job</h1>
+                    <form (ngSubmit)="onSubmit()">
+
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Job Title</mat-label>
+
+                            <input [(ngModel)]="jobs.jobTitle"
+                            required name="jobTitle" type="text" matInput/><br>
+
+                        </mat-form-field><br>
+
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Job Description</mat-label>
+
+                            <input [(ngModel)]="jobs.jobDesc"
+                            required name="jobDesc" type="text" matInput/><br>
+
+                        </mat-form-field><br>
+
+                        <mat-form-field class="full-width"  appearance="outline">
+
+                            <mat-label>Job Field</mat-label>
+
+                            <input [(ngModel)]="jobs.jobField"
+                             required  name="jobField" type="text" matInput/><br> 
+
+                        </mat-form-field><br>
+
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Employement Type</mat-label>
+
+                            <input [(ngModel)]="jobs.employementType"
+                            required name="employementType" type="text" matInput/><br>
+
+                        </mat-form-field><br>
+
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>CTC</mat-label>
+
+                            <input [(ngModel)]="jobs.ctc"
+                            required name="ctc" type="number" matInput/><br>
+
+                        </mat-form-field><br>
+
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Experience In Years</mat-label>
+
+                            <input [(ngModel)]="jobs.experienceInYears"
+                            required name="experienceInYears" type="number" matInput/><br>
+
+                        </mat-form-field><br>
+
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Education</mat-label>
+
+                            <input [(ngModel)]="jobs.education"
+                            required name="education" type="text" matInput/><br>
+
+                        </mat-form-field><br>
+
+                       
+
+                        <button mat-raised-button color="accent" type="submit">Post Job</button>
+                        <button mat-raised-button color="accent"  type="reset">Reset</button>
+                    </form><br> -->
+                   <p> {{jobs | json}}</p>
+            <!-- </div> 
+        </div>
+</div> -->
+
+
+
+
+

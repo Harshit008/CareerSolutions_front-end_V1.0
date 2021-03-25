@@ -8,6 +8,7 @@ import { AuthGuard } from './services/auth.guard';
 import { SignupComponent } from './components/signup/signup.component';
 import { SuccessComponent } from './components/success/success.component';
 import { EditJobComponent } from './components/dashboard/edit-job/edit-job.component';
+import { PostJobComponent } from './components/post-job/post-job.component';
 const routes: Routes = [
   {
     path:'',
@@ -43,6 +44,11 @@ const routes: Routes = [
   {
     path:'editJob',
     component: EditJobComponent,
+    pathMatch:'full'
+  },
+  {
+    path:'postJob',
+    component: PostJobComponent,
     pathMatch:'full'
   }
   
