@@ -7,12 +7,18 @@ import { JobServiceService } from "src/app/services/jobService/job-service.servi
   styleUrls: ['./job-seeker-dashboard.component.css']
 })
 export class JobSeekerDashboardComponent implements OnInit {
-  public jobs: Jobs[];
+  public jobs:any[];
   constructor(private jobservice: JobServiceService) { }
-
+  public recruiterName:string
+  public jsusername:string
+  application={
+    applicationId:'',
+    status:''
+  }
   ngOnInit(){
       this.jobservice.getJsJob().subscribe(
-        (response:Jobs[]) => {
+        (response:any[]) => {
+           console.log(response)
            this.jobs=response;
           
         },
@@ -21,6 +27,12 @@ export class JobSeekerDashboardComponent implements OnInit {
         }
       );
      
+  }
+
+  apply(jobId:string){
+    this.jsusername=localStorage.getItem('jsusername');
+    this.jobservice.apply(jobId,this.jsusername,this.application);
+
   }
 
 }

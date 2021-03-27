@@ -1,3 +1,5 @@
+import { Recruiter } from "./Recruiter";
+
 export interface Jobs{
     jobId:number;
     jobTitle: string;
@@ -7,7 +9,5 @@ export interface Jobs{
     ctc: number;
     experienceInYears: number;
     education: string;
-    recruiter:{
-        
-    }
+    recruiter:Recruiter
 }

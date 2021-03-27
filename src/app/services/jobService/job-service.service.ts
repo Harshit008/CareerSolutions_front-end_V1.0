@@ -35,4 +35,8 @@ export class JobServiceService {
     return this.http.get<Jobs[]>(`${this.apiurl}/jobSeeker/getJobs`);
   }
 
+  public apply(jobId:string,jsusername:string,application): Observable<any>{
+    return this.http.post<any>(`${this.apiurl}/insertApplications/${jobId}/${jsusername}`,application);
+  }
+
 }
