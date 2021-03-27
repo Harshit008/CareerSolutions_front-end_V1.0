@@ -31,4 +31,8 @@ export class JobServiceService {
     return this.http.post<Jobs>(`${this.apiurl}/insertJob/${username}`,jobs_details);
   }
 
+  public getJsJob(): Observable<Jobs[]>{
+    return this.http.get<Jobs[]>(`${this.apiurl}/jobSeeker/getJobs`);
+  }
+
 }

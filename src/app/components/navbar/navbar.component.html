@@ -1,7 +1,9 @@
 <mat-toolbar color="primary">
-    <span><a mat-icon-button routerLink="/" >Career Solutions</a></span>
+    <span><a mat-icon-button routerLink="/home" >Career Solutions</a></span>
     <span class="example-spacer" ></span>
     <a *ngIf="loggedIn" style="margin-right: 20px;" mat-icon-button >User</a>
     <a *ngIf="loggedIn" style="margin-right: 40px;" mat-icon-button routerLink="/postJob">Post Jobs</a>
     <a *ngIf="loggedIn" (click)="logoutUser()" style="margin-right: 20px;" mat-icon-button >Logout</a>
+    <a *ngIf="jsloggedIn" style="margin-right: 40px;" mat-icon-button routerLink="/postJob">Edit Profile</a>
+    <a *ngIf="jsloggedIn" (click)="logoutUser()" style="margin-right: 20px;" mat-icon-button >Logout</a>
 </mat-toolbar>

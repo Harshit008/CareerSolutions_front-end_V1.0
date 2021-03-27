@@ -20,6 +20,7 @@ import { SuccessComponent } from './components/success/success.component';
 import { EditJobComponent } from './components/dashboard/edit-job/edit-job.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { PostJobComponent } from './components/post-job/post-job.component';
+import { JobSeekerDashboardComponent } from './components/job-seeker-dashboard/job-seeker-dashboard.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +32,9 @@ import { PostJobComponent } from './components/post-job/post-job.component';
     SignupComponent,
     SuccessComponent,
     EditJobComponent,
-    PostJobComponent   
+    PostJobComponent,
+    JobSeekerDashboardComponent,
+    
    
   ],
   imports: [

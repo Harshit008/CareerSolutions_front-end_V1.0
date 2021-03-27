@@ -7,4 +7,7 @@ export interface Jobs{
     ctc: number;
     experienceInYears: number;
     education: string;
+    recruiter:{
+        
+    }
 }

@@ -9,9 +9,11 @@ import { SignupComponent } from './components/signup/signup.component';
 import { SuccessComponent } from './components/success/success.component';
 import { EditJobComponent } from './components/dashboard/edit-job/edit-job.component';
 import { PostJobComponent } from './components/post-job/post-job.component';
+import { JobSeekerDashboardComponent } from './components/job-seeker-dashboard/job-seeker-dashboard.component';
+import { JsAuthGuard } from "src/app/services/js-auth.guard";
 const routes: Routes = [
   {
-    path:'',
+    path:'home',
     component: HomeComponent,
     pathMatch:'full'
   },
@@ -52,6 +54,12 @@ const routes: Routes = [
     component: PostJobComponent,
     pathMatch:'full',
     canActivate:[AuthGuard]
+  },
+  {
+    path:'jobSeekerDashboard',
+    component: JobSeekerDashboardComponent,
+    pathMatch:'full',
+    canActivate:[JsAuthGuard]
   }
   
 ];
