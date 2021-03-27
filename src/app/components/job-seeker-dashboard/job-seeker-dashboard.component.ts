@@ -12,7 +12,6 @@ export class JobSeekerDashboardComponent implements OnInit {
   public recruiterName:string
   public jsusername:string
   application={
-    applicationId:'',
     status:''
   }
   ngOnInit(){
@@ -31,7 +30,16 @@ export class JobSeekerDashboardComponent implements OnInit {
 
   apply(jobId:string){
     this.jsusername=localStorage.getItem('jsusername');
-    this.jobservice.apply(jobId,this.jsusername,this.application);
+    this.jobservice.apply(jobId,this.jsusername,this.application).subscribe(
+      (response:any[]) => {
+        console.log(response)
+        //this.jobs=response;
+       
+     },
+     error=>{
+       console.log(error);
+     }
+    );
 
   }
 

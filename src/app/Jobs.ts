@@ -1,3 +1,4 @@
+import { Application } from "./Application";
 import { Recruiter } from "./Recruiter";
 
 export interface Jobs{
@@ -9,5 +10,6 @@ export interface Jobs{
     ctc: number;
     experienceInYears: number;
     education: string;
-    recruiter:Recruiter
+    recruiter:Recruiter;
+    //application:Application
 }

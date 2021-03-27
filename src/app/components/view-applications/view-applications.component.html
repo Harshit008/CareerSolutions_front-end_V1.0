@@ -1,0 +1,39 @@
+<div class="bootstrap wrapper">
+    
+    <div class="container mt">
+        
+        <div class="container text-center form-group">
+            <img class="img-fluid" style="width: 200px" src="/assets/images/logo.jpg" alt="" srcset="">
+        </div>
+            <div class="text-center">
+              
+               <table class="table table-bordered table-striped">
+                   <tr>
+                       <th>Application Id</th>
+                       <th>Application Status</th>
+                       <th>Company Name</th>
+                       <th>Job Title</th>
+                       <th>Actions</th>
+                   </tr>
+
+
+                  <tr *ngFor="let application of applications">
+                       <td>{{application.applicationId}}</td>
+                       <td>{{application.status}}</td>
+                       <td>{{application.jobs.recruiter.recruiterName}}</td>
+                       <td>{{application.jobs.jobTitle}}</td>
+                       <td colspan="2">
+                        <button type="button" class="btn btn-primary btn-sm" (click)="apply(job.jobId)">Revoke</button>
+                       </td>
+
+                   </tr>
+               </table>
+                 
+            </div> 
+        </div>
+</div>
+
+
+
+
+

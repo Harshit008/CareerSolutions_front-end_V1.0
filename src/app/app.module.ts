@@ -21,6 +21,7 @@ import { EditJobComponent } from './components/dashboard/edit-job/edit-job.compo
 import { ReactiveFormsModule } from '@angular/forms';
 import { PostJobComponent } from './components/post-job/post-job.component';
 import { JobSeekerDashboardComponent } from './components/job-seeker-dashboard/job-seeker-dashboard.component';
+import { ViewApplicationsComponent } from './components/view-applications/view-applications.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,6 +35,8 @@ import { JobSeekerDashboardComponent } from './components/job-seeker-dashboard/j
     EditJobComponent,
     PostJobComponent,
     JobSeekerDashboardComponent,
+    ViewApplicationsComponent,
+  
     
    
   ],

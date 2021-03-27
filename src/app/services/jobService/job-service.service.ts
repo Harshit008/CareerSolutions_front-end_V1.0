@@ -39,4 +39,8 @@ export class JobServiceService {
     return this.http.post<any>(`${this.apiurl}/insertApplications/${jobId}/${jsusername}`,application);
   }
 
+  public displayApplication(jsusername:string):Observable<any[]>{
+    return this.http.get<any[]>(`${this.apiurl}/getApplication/${jsusername}`);
+  }
+
 }
