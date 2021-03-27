@@ -43,4 +43,25 @@ export class JobServiceService {
     return this.http.get<any[]>(`${this.apiurl}/getApplication/${jsusername}`);
   }
 
+  public revoke(applicationId:string):Observable<any>{
+    return this.http.delete(`${this.apiurl}/deleteApplication/${applicationId}`);
+  }
+
+  public upload(jsusername:string,file):Observable<any> {
+  
+    // Create form data
+    const formData = new FormData(); 
+      
+    // Store form name as "file" with file data
+    formData.append("files", file, file.name);
+      
+    // Make http post request over api
+    // with formData as req
+    return this.http.post(`${this.apiurl}/uploadResume/${jsusername}`, formData)
+}
+
+public registerJobSeeker(jobSeeker_details){
+    return this.http.post(`${this.apiurl}/registerjobseeker`, jobSeeker_details)
+}
+
 }

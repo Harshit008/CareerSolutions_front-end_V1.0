@@ -4,6 +4,7 @@
     <a *ngIf="loggedIn" style="margin-right: 20px;" mat-icon-button >User</a>
     <a *ngIf="loggedIn" style="margin-right: 40px;" mat-icon-button routerLink="/postJob">Post Jobs</a>
     <a *ngIf="loggedIn" (click)="logoutUser()" style="margin-right: 20px;" mat-icon-button >Logout</a>
+    <a *ngIf="jsloggedIn" style="margin-right: 40px;" mat-icon-button routerLink="/jobSeekerDashboard">View Jobs</a>
     <a *ngIf="jsloggedIn" style="margin-right: 85px;" mat-icon-button routerLink="/viewApplications">View Applications</a>
     <a *ngIf="jsloggedIn" (click)="logoutUser()" style="margin-right: 20px;" mat-icon-button >Logout</a>
 </mat-toolbar>

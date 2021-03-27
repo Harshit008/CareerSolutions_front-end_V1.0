@@ -1,0 +1,76 @@
+<div class="bootstrap wrapper">
+    
+    <div class="container mt">
+        
+        <div class="container text-center form-group">
+            <img class="img-fluid" style="width: 200px" src="/assets/images/logo.jpg" alt="" srcset="">
+        </div>
+            <div class="text-center">
+                
+                <h1>Job Seeker Signup Page</h1>
+                    <form (ngSubmit)="onSubmit()">
+
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Name</mat-label>
+
+                            <input [(ngModel)]="jobSeeker_details.name"
+                            required name="name" type="text" matInput/><br>
+
+                        </mat-form-field><br>
+
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Username</mat-label>
+
+                            <input [(ngModel)]="jobSeeker_details.username"
+                            required name="username" type="text" matInput/><br>
+
+                        </mat-form-field><br>
+
+                        <mat-form-field class="full-width"  appearance="outline">
+
+                            <mat-label>Password</mat-label>
+
+                            <input [(ngModel)]="jobSeeker_details.password"
+                             required  name="password" type="password" matInput/><br> 
+
+                        </mat-form-field><br>
+
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Email</mat-label>
+
+                            <input [(ngModel)]="jobSeeker_details.email"
+                            required name="email" type="text" matInput/><br>
+
+                        </mat-form-field><br>
+
+                        <div class="text-center">
+                            <input class="form-control" type="file" 
+                                    (change)="onChange($event)">
+                        </div>
+                          
+                        <!-- Shareable short link of  uploaded file -->
+                        <div class="container text-center jumbotron"
+                            *ngIf="shortLink">
+                            <h2> Visit Here</h2>
+                            <a href="{{shortLink}}">{{shortLink}}</a>
+                        </div>
+                          
+                        <!--Flag variable is used here-->
+                        <div class="container" *ngIf="loading">
+                            <h3>Loading ...</h3>
+                        </div>
+
+                        
+                        <button mat-raised-button color="accent" type="submit" (click)="onUpload(jobSeeker_details.username)">Register</button>
+                        <button mat-raised-button color="accent" style="margin-left: 20px;"  type="reset">Reset</button>
+                    </form><br>
+                   
+
+                   <p> {{jobSeeker_details | json}}</p>
+            </div> 
+        </div>
+</div>
+
+
+
+

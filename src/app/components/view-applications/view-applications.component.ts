@@ -27,4 +27,18 @@ export class ViewApplicationsComponent implements OnInit {
     );
   }
 
+
+  revoke(applicationId:string){
+    this.jobservice.revoke(applicationId).subscribe(
+      (response:any)=>{
+          console.log(response)
+          
+      },
+      error=>{
+        console.log(error)
+        window.location.href="/viewApplications";
+      }
+    )
+  }
+
 }
