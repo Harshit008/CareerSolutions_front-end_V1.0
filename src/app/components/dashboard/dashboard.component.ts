@@ -46,4 +46,8 @@ export class DashboardComponent implements OnInit {
    
   }
 
+  public storeJobId(jobId:string){
+    localStorage.setItem('jobId',jobId);
+  }
+
 }

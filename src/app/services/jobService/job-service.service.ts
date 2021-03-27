@@ -60,8 +60,16 @@ export class JobServiceService {
     return this.http.post(`${this.apiurl}/uploadResume/${jsusername}`, formData)
 }
 
-public registerJobSeeker(jobSeeker_details){
-    return this.http.post(`${this.apiurl}/registerjobseeker`, jobSeeker_details)
-}
+  public registerJobSeeker(jobSeeker_details){
+      return this.http.post(`${this.apiurl}/registerjobseeker`, jobSeeker_details)
+  }
+
+  public manageApplications(jobId:string): Observable<any[]>{
+    return this.http.get<any[]>(`${this.apiurl}/manageApplication/${jobId}`);
+  }
+
+  public acceptApplication(applicationId:string,application): Observable<any>{
+    return this.http.patch<any>(`${this.apiurl}/acceptApplication/${applicationId}`,application)
+  }
 
 }

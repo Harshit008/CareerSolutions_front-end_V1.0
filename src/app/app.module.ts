@@ -23,6 +23,7 @@ import { PostJobComponent } from './components/post-job/post-job.component';
 import { JobSeekerDashboardComponent } from './components/job-seeker-dashboard/job-seeker-dashboard.component';
 import { ViewApplicationsComponent } from './components/view-applications/view-applications.component';
 import { JobSeekerSignupComponent } from './components/job-seeker-signup/job-seeker-signup.component';
+import { ManageApplicationsComponent } from './components/manage-applications/manage-applications.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,6 +39,7 @@ import { JobSeekerSignupComponent } from './components/job-seeker-signup/job-see
     JobSeekerDashboardComponent,
     ViewApplicationsComponent,
     JobSeekerSignupComponent,
+    ManageApplicationsComponent,
   
     
    

@@ -13,6 +13,7 @@ import { JobSeekerDashboardComponent } from './components/job-seeker-dashboard/j
 import { JsAuthGuard } from "src/app/services/js-auth.guard";
 import { ViewApplicationsComponent } from "./components/view-applications/view-applications.component";
 import { JobSeekerSignupComponent } from './components/job-seeker-signup/job-seeker-signup.component';
+import { ManageApplicationsComponent } from './components/manage-applications/manage-applications.component';
 const routes: Routes = [
   {
     path:'home',
@@ -73,6 +74,12 @@ const routes: Routes = [
     path:'jobSeekerSignup',
     component: JobSeekerSignupComponent,
     pathMatch:'full'
+  },
+  {
+    path:'manageApplications',
+    component: ManageApplicationsComponent,
+    pathMatch:'full',
+    canActivate:[AuthGuard]
   }
   
 ];
