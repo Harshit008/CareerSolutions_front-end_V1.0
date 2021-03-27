@@ -25,21 +25,21 @@ export class JobSeekerSignupComponent implements OnInit {
   }
 
   onSubmit(){
-    if((this.jobSeeker_details.username!='' && this.jobSeeker_details.password!='' && this.jobSeeker_details.name!='' && this.jobSeeker_details.email!='')&& (this.jobSeeker_details.username!=null && this.jobSeeker_details.password!=null && this.jobSeeker_details.name!=null && this.jobSeeker_details.email!=null ))
-    {
-            this.jobService.registerJobSeeker(this.jobSeeker_details).subscribe(
-              response=>{
-                console.log(response);
+    // if((this.jobSeeker_details.username!='' && this.jobSeeker_details.password!='' && this.jobSeeker_details.name!='' && this.jobSeeker_details.email!='')&& (this.jobSeeker_details.username!=null && this.jobSeeker_details.password!=null && this.jobSeeker_details.name!=null && this.jobSeeker_details.email!=null ))
+    // {
+    //         this.jobService.registerJobSeeker(this.jobSeeker_details).subscribe(
+    //           response=>{
+    //             console.log(response);
                     
-                window.location.href="/success";
-              },
-              error=>{
-                console.log(error);
-      }
-            )
-    }else{
-      console.log("Fields are empty");
-    }
+    //             window.location.href="/success";
+    //           },
+    //           error=>{
+    //             console.log(error);
+    //   }
+    //         )
+    // }else{
+    //   console.log("Fields are empty");
+    // }
 
   }
   // Inject service 
