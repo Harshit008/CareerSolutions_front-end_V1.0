@@ -1,0 +1,142 @@
+<div class="bootstrap wrapper">
+    
+    <div class="container mt">
+        
+        <div class="container text-center form-group">
+            <img class="img-fluid" style="width: 200px" src="/assets/images/logo.jpg" alt="" srcset="">
+        </div>
+            <div class="text-center">
+                
+                <h1>Edit Professional Details</h1>
+                    <form (ngSubmit)="onSubmit()" class="EditProfile">
+
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Experience</mat-label>
+
+                            <input [(ngModel)]="professional_details.experience"
+                            required name="experience" type="text" matInput/><br>
+
+                        </mat-form-field><br>
+
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Previous Company</mat-label>
+
+                            <input [(ngModel)]="professional_details.previousCompany"
+                            required name="previousCompany" type="text" matInput/><br>
+
+                        </mat-form-field><br>
+
+                        <mat-form-field class="full-width"  appearance="outline">
+
+                            <mat-label>Career Level</mat-label>
+
+                            <input [(ngModel)]="professional_details.careerLevel"
+                             required  name="careerLevel" type="text" matInput/><br> 
+
+                        </mat-form-field><br>
+
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Privious/Current CTC</mat-label>
+
+                            <input [(ngModel)]="professional_details.previousctc"
+                            required name="previousctc" type="text" matInput/><br>
+
+                        </mat-form-field><br>
+
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Certifications</mat-label>
+
+                            <input [(ngModel)]="professional_details.certifications"
+                            required name="certifications" type="text" matInput/><br>
+
+                        </mat-form-field><br>
+
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Projects</mat-label>
+
+                            <input [(ngModel)]="professional_details.projects"
+                            required name="projects" type="text" matInput/><br>
+
+                        </mat-form-field><br>
+
+                        <h1>Edit Educational details</h1>
+
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Level of Education (Bachelors/Masters)</mat-label>
+
+                            <input [(ngModel)]="educational_details.levelOfEducation"
+                            required name="levelOfEducation" type="text" matInput/><br>
+
+                        </mat-form-field><br>
+
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Field of Study (IT/CS/Chemical etc)</mat-label>
+
+                            <input [(ngModel)]="educational_details.fiedldOfStudy"
+                            required name="fiedldOfStudy" type="text" matInput/><br>
+
+                        </mat-form-field><br>
+
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>College/University Name</mat-label>
+
+                            <input [(ngModel)]="educational_details.college"
+                            required name="college" type="text" matInput/><br>
+
+                        </mat-form-field><br>
+
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>10th Board Marks (out of 100)</mat-label>
+
+                            <input [(ngModel)]="educational_details.hscMarks"
+                            required name="hscMarks" type="text" matInput/><br>
+
+                        </mat-form-field><br>
+
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>12th Board Marks (out of 100)</mat-label>
+
+                            <input [(ngModel)]="educational_details.sscMarks"
+                            required name="sscMarks" type="text" matInput/><br>
+
+                        </mat-form-field><br>
+
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Graduation GPA (in scale of 10)</mat-label>
+
+                            <input [(ngModel)]="educational_details.graduationMarks"
+                            required name="graduationMarks" type="text" matInput/><br>
+
+                        </mat-form-field><br>
+
+                        <div >
+                            <input id="fileInput" class="form-control" type="file" 
+                                    (change)="onChange($event)">
+                        </div>
+                          
+                        <!-- Shareable short link of  uploaded file -->
+                        <!-- <div class="container text-center jumbotron"
+                            *ngIf="shortLink">
+                            <h2> Visit Here</h2>
+                            <a href="{{shortLink}}">{{shortLink}}</a>
+                        </div> -->
+                          
+                        <!--Flag variable is used here-->
+                        <div class="container" *ngIf="loading">
+                            <h3>Loading ...</h3>
+                        </div>
+
+                        
+                        <button mat-raised-button color="accent" type="submit" >Register</button>
+                        <button mat-raised-button color="accent" style="margin-left: 20px;"  type="reset">Reset</button>
+                    </form><br>
+                   
+
+                   <!-- <p> {{jobSeeker_details | json}}</p> -->
+            </div> 
+        </div>
+</div>
+
+
+
+

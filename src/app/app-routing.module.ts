@@ -14,6 +14,7 @@ import { JsAuthGuard } from "src/app/services/js-auth.guard";
 import { ViewApplicationsComponent } from "./components/view-applications/view-applications.component";
 import { JobSeekerSignupComponent } from './components/job-seeker-signup/job-seeker-signup.component';
 import { ManageApplicationsComponent } from './components/manage-applications/manage-applications.component';
+import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
 const routes: Routes = [
   {
     path:'home',
@@ -80,6 +81,12 @@ const routes: Routes = [
     component: ManageApplicationsComponent,
     pathMatch:'full',
     canActivate:[AuthGuard]
+  },
+  {
+    path:'editProfile',
+    component: EditProfileComponent,
+    pathMatch:'full',
+    canActivate:[JsAuthGuard]
   }
   
 ];

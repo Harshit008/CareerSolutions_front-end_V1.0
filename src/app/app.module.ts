@@ -24,6 +24,7 @@ import { JobSeekerDashboardComponent } from './components/job-seeker-dashboard/j
 import { ViewApplicationsComponent } from './components/view-applications/view-applications.component';
 import { JobSeekerSignupComponent } from './components/job-seeker-signup/job-seeker-signup.component';
 import { ManageApplicationsComponent } from './components/manage-applications/manage-applications.component';
+import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,6 +41,7 @@ import { ManageApplicationsComponent } from './components/manage-applications/ma
     ViewApplicationsComponent,
     JobSeekerSignupComponent,
     ManageApplicationsComponent,
+    EditProfileComponent,
   
     
    

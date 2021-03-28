@@ -33,8 +33,22 @@ export class ManageApplicationsComponent implements OnInit {
         },
         error=>{
           console.log(error)
+          window.location.href="/manageApplications"
         }
       )
   }
+
+  rejectApplication(applicationId:string){
+
+    this.jobService.rejectApplication(applicationId,this.application).subscribe(
+      response=>{
+        console.log(response)
+      },
+      error=>{
+        console.log(error)
+        window.location.href="/manageApplications"
+      }
+    )
+}
 
 }

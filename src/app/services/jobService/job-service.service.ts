@@ -68,8 +68,20 @@ export class JobServiceService {
     return this.http.get<any[]>(`${this.apiurl}/manageApplication/${jobId}`);
   }
 
-  public acceptApplication(applicationId:string,application): Observable<any>{
-    return this.http.patch<any>(`${this.apiurl}/acceptApplication/${applicationId}`,application)
+  public acceptApplication(applicationId:string,application): Observable<string>{
+    return this.http.patch<string>(`${this.apiurl}/acceptApplication/${applicationId}`,application)
+  }
+
+  public rejectApplication(applicationId:string,application): Observable<string>{
+    return this.http.patch<string>(`${this.apiurl}/rejectApplication/${applicationId}`,application)
+  }
+
+  public insertProfessionalDetails(professional_details,username): Observable<any>{
+    return this.http.patch(`${this.apiurl}/insertProfessionalDetails/${username}`,professional_details);
+  }
+
+  public insertEducationalDetails(educational_details,username): Observable<any>{
+    return this.http.patch(`${this.apiurl}/insertEducationalDetails/${username}`,educational_details);
   }
 
 }
