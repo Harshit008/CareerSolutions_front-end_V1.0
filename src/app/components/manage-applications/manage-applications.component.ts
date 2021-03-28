@@ -50,5 +50,9 @@ export class ManageApplicationsComponent implements OnInit {
       }
     )
 }
+  storeApplicationId(applicationId:string){
+    localStorage.setItem('applicationId',applicationId);
+    window.location.href="/viewProfile";
+  }
 
 }
