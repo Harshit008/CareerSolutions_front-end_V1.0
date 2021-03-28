@@ -13,7 +13,19 @@ export class JobSeekerSignupComponent implements OnInit {
     name: '',
     password: '',
     username: '',
-    email: ''
+    email: '',
+    experience:'',
+    previousCompany: '',
+    careerLevel: '',
+    previousctc:'',
+    certifications: '',
+    projects: '',
+    levelOfEducation:'',
+    fieldOfStudy:'',
+    college:'',
+    hscMarks: '',
+    sscMarks: '',
+    graduationMarks: ''
   }
    // Variable to store shortLink from api response
    shortLink: string = "";

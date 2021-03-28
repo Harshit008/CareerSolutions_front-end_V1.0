@@ -76,8 +76,8 @@ export class JobServiceService {
     return this.http.patch<string>(`${this.apiurl}/rejectApplication/${applicationId}`,application)
   }
 
-  public insertProfessionalDetails(professional_details,username): Observable<any>{
-    return this.http.patch(`${this.apiurl}/insertProfessionalDetails/${username}`,professional_details);
+  public editProfile(jobSeeker_details,username): Observable<any>{
+    return this.http.patch(`${this.apiurl}/editProfile/${username}`,jobSeeker_details);
   }
 
   public insertEducationalDetails(educational_details,username): Observable<any>{
