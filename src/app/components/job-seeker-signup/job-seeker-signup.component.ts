@@ -43,7 +43,7 @@ export class JobSeekerSignupComponent implements OnInit {
               response=>{
                 console.log(response);
                     
-                window.location.href="/success";
+                window.location.href="/jobseekersuccess";
               },
               error=>{
                 console.log(error);
