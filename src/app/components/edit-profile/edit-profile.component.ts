@@ -25,6 +25,7 @@ export class EditProfileComponent implements OnInit {
     sscMarks: '',
     graduationMarks: ''
   }
+  public jsusername:string
    // Variable to store shortLink from api response
    shortLink: string = "";
    loading: boolean = false; // Flag variable
@@ -32,7 +33,8 @@ export class EditProfileComponent implements OnInit {
    public username: string
   constructor(private jobService: JobServiceService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.jsusername=localStorage.getItem('jsusername');
   }
 
   onSubmit(){
@@ -56,8 +58,25 @@ export class EditProfileComponent implements OnInit {
     
   }
 
-  onChange(event){
+  onChange(event) {
+    this.files = event.target.files[0];
+}
 
-  }
+// OnClick of button Upload
+onUpload() {
+    this.loading = !this.loading;
+    console.log(this.files);
+    this.jobService.upload(this.jsusername,this.files).subscribe(
+        (event: any) => {
+            if (typeof (event) === 'object') {
+
+                // Short link via api response
+                this.shortLink = event.link;
+
+                this.loading = false; // Flag variable 
+            }
+        }
+    );
+}
 
 }

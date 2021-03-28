@@ -1,0 +1,49 @@
+<div class="bootstrap wrapper">
+    
+    <div class="container mt">
+        
+        <div class="container text-center form-group">
+            <img class="img-fluid" style="width: 200px" src="/assets/images/logo.jpg" alt="" srcset="">
+        </div>
+            <div class="text-center">
+              
+               <table class="table table-bordered table-striped">
+                   <tr>
+                       <th>Job Id</th>
+                       <th>Recruiter</th>
+                       <th>Job Title</th>
+                       <th>Job Description</th>
+                       <th>Job Field</th>
+                       <th>Employement Type</th>
+                       <th>CTC</th>
+                       <th>Experience</th>
+                       <th>Education</th>
+                       <th>Actions</th>
+                   </tr>
+
+
+                   <tr *ngFor="let job of jobs">
+                       <td>{{job.jobId}}</td>
+                       <td>{{job.recruiter.recruiterName}}</td>
+                       <td>{{job.jobTitle}}</td>
+                       <td>{{job.jobDesc}}</td>
+                       <td>{{job.jobField}}</td>
+                       <td>{{job.employementType}}</td>
+                       <td>{{job.ctc}}</td>
+                       <td>{{job.experienceInYears}}</td>
+                       <td>{{job.education}}</td>
+                       <td colspan="2">
+                        <button type="button" class="btn btn-primary btn-sm" (click)="apply(job.jobId)">Apply</button>
+                       </td>
+
+                   </tr>
+               </table>
+                 
+            </div> 
+        </div>
+</div>
+
+
+
+
+

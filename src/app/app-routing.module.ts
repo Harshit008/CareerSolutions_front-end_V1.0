@@ -16,6 +16,7 @@ import { JobSeekerSignupComponent } from './components/job-seeker-signup/job-see
 import { ManageApplicationsComponent } from './components/manage-applications/manage-applications.component';
 import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
 import { JobseekersuccessComponent } from './components/jobseekersuccess/jobseekersuccess.component';
+import { ViewProfileComponent } from './components/view-profile/view-profile.component';
 
 const routes: Routes = [
   {
@@ -95,6 +96,12 @@ const routes: Routes = [
     component:JobseekersuccessComponent,
     pathMatch:'full'
   },
+  {
+    path:'viewProfile',
+    component: ViewProfileComponent,
+    pathMatch:'full',
+    canActivate:[AuthGuard]
+  }
   
 ];
 
