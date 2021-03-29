@@ -54,7 +54,7 @@ export class ViewProfileComponent implements OnInit {
   }
 
   getDownloadLink(id):string{
-    return this.downloadLink = "http://localhost:9999/myapp/downloadResume/" + this.resume.id;
+    return this.downloadLink = "http://careersolutionsbackendv1-env.eba-umxntpch.ap-south-1.elasticbeanstalk.com/myapp/downloadResume/" + this.resume.id;
   }
 
 }
