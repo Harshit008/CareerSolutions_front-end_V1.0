@@ -4,11 +4,12 @@ import { Observable } from 'rxjs';
 import { Jobs } from "src/app/Jobs";
 import { Resume } from 'src/app/Resume';
 import { JobSeeker } from 'src/app/JobSeeker';
+import { environment } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root'
 })
 export class JobServiceService {
-  apiurl="http://localhost:9999/myapp";
+  apiurl=environment.apiBaseUrl
   constructor(private http:HttpClient) { }
   
   public getJobs(username:string): Observable<Jobs[]> {

@@ -32,6 +32,7 @@ export class ManageApplicationsComponent implements OnInit {
           console.log(response)
         },
         error=>{
+          alert("Application accepted!")          
           console.log(error)
           window.location.href="/manageApplications"
         }
@@ -45,6 +46,7 @@ export class ManageApplicationsComponent implements OnInit {
         console.log(response)
       },
       error=>{
+        alert("Application rejected!")
         console.log(error)
         window.location.href="/manageApplications"
       }

@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root'
 })
 export class JobSeekerloginService {
-  apiurl="http://localhost:9999/myapp"
+  apiurl=environment.apiBaseUrl
   constructor(private http: HttpClient) { }
   generateToken(jobSeeker_credentials:any) {
 
