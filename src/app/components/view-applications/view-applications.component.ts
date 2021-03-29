@@ -35,6 +35,7 @@ export class ViewApplicationsComponent implements OnInit {
           
       },
       error=>{
+        alert("The application has been revoked from the system!")
         console.log(error)
         window.location.href="/viewApplications";
       }

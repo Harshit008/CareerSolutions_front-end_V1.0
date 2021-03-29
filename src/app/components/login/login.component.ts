@@ -28,6 +28,7 @@ export class LoginComponent implements OnInit {
                         window.location.href="/dashboard";
               },
               error=>{
+                        alert("Invalid username or password");
                         console.log(error);
               }
           )

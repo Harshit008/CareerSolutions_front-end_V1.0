@@ -28,6 +28,7 @@ export class PostJobComponent implements OnInit {
                 console.log(response);
                     
                 window.location.href="/dashboard";
+                alert("New Job has been posted successfully!")
               },
               error=>{
                 console.log(error);

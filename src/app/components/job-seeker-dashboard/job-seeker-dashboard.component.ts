@@ -32,11 +32,13 @@ export class JobSeekerDashboardComponent implements OnInit {
     this.jsusername=localStorage.getItem('jsusername');
     this.jobservice.apply(jobId,this.jsusername,this.application).subscribe(
       (response:any[]) => {
+        
         console.log(response)
         //this.jobs=response;
        
      },
      error=>{
+      alert("You've Successfully applied for the job. Please wait for the response from the recruiter!")
        console.log(error);
      }
     );

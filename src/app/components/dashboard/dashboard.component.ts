@@ -24,6 +24,7 @@ export class DashboardComponent implements OnInit {
       },
       error=>{
         console.log(error);
+        alert("The Job has been deleted");
         window.location.href="dashboard";
       }
     );
@@ -42,6 +43,7 @@ export class DashboardComponent implements OnInit {
 
   public editJob(jobId:string){
     console.log(jobId);
+
     localStorage.setItem('jobId',jobId);
    
   }

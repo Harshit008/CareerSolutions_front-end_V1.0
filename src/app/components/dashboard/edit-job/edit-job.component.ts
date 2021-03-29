@@ -43,6 +43,7 @@ export class EditJobComponent implements OnInit {
       this.jobservice.updateJob(this.jobId,localStorage.getItem('username'),this.jobs).subscribe(
         response=>{
           console.log(response);
+          alert("New Changes have been saved!");
           window.location.href="/dashboard";
         },
         error=>{

@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Jobs } from "src/app/Jobs";
+import { Resume } from 'src/app/Resume';
+import { JobSeeker } from 'src/app/JobSeeker';
 @Injectable({
   providedIn: 'root'
 })
@@ -82,6 +84,18 @@ export class JobServiceService {
 
   public insertEducationalDetails(educational_details,username): Observable<any>{
     return this.http.patch(`${this.apiurl}/insertEducationalDetails/${username}`,educational_details);
+  }
+
+  public downloadResume(jobSeekerId):Observable<Resume>{
+    return this.http.get<Resume>(`${this.apiurl}/getResume/${jobSeekerId}`);
+  }
+
+  public getJobSeeker(applicationId): Observable<JobSeeker>{
+    return this.http.get<JobSeeker>(`${this.apiurl}/getJobSeekerFromApplication/${applicationId}`);
+  }
+
+  public getDownloadLink(fileId){
+    return this.http.get(`${this.apiurl}/downloadResume/${fileId}`);
   }
 
 }

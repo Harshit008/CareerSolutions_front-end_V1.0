@@ -27,6 +27,7 @@ export class JobseekerloginComponent implements OnInit {
                       window.location.href="jobSeekerDashboard";
             },
             error=>{
+                      alert("Invalid username or password");
                       console.log(error);
             }
         )
