@@ -1,21 +1,25 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/dmhendricks/bootstrap-grid-css@4.1.3/dist/css/bootstrap-grid.min.css" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet"
+  href="//cdn.jsdelivr.net/gh/dmhendricks/bootstrap-grid-css@4.1.3/dist/css/bootstrap-grid.min.css" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
- 
 
-<mat-toolbar color="primary">
-    <span class="text-uppercase font-weight-bold"><img src="/assets/images/logo.png" width="45" alt="" class="d-inline-block align-middle mr-2"><a mat-icon-button routerLink="/home" >Career Solutions</a></span>
-    <span class="example-spacer" ></span>
-    <a *ngIf="loggedIn" style="margin-right: 20px;" mat-icon-button >User</a>
+<div id="navBar">
+  <mat-toolbar color="primary">
+    <span class="text-uppercase font-weight-bold"><img src="/assets/images/logo.png" width="45" alt=""
+        class="d-inline-block align-middle mr-2"><a style="color: rgb(247, 246, 244);" mat-icon-button routerLink="/home">Career Solutions</a></span>
+    <span class="example-spacer"></span>
+    <a id="user" *ngIf="loggedIn" style="margin-right: 20px;" mat-icon-button>User</a>
     <a *ngIf="loggedIn" style="margin-right: 40px;" mat-icon-button routerLink="/postJob">Post Jobs</a>
-    <a *ngIf="loggedIn" (click)="logoutUser()" style="margin-right: 20px;" mat-icon-button >Logout</a>
+    <a *ngIf="loggedIn" (click)="logoutUser()" style="margin-right: 20px;" mat-icon-button>Logout</a>
     <a *ngIf="jsloggedIn" style="margin-right: 40px;" mat-icon-button routerLink="/jobSeekerDashboard">View Jobs</a>
-    <a *ngIf="jsloggedIn" style="margin-right: 85px;" mat-icon-button routerLink="/viewApplications">View Applications</a>
+    <a *ngIf="jsloggedIn" style="margin-right: 85px;" mat-icon-button routerLink="/viewApplications">View
+      Applications</a>
     <a *ngIf="jsloggedIn" style="margin-right: 40px;" mat-icon-button routerLink="/editProfile">Edit Profile</a>
-    <a *ngIf="jsloggedIn" (click)="logoutUser()" style="margin-right: 20px;" mat-icon-button >Logout</a>
-</mat-toolbar>
+    <a *ngIf="jsloggedIn" (click)="logoutUser()" style="margin-right: 20px;" mat-icon-button>Logout</a>
+  </mat-toolbar>
+</div>
