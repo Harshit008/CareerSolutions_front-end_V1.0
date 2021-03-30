@@ -1,12 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+    <div class="hero-image ">
+        <div class="hero-text">
 <div class="bootstrap wrapper">
     
     <div class="container mt">
         
-        <div class="container text-center form-group">
-            <img class="img-fluid" style="width: 200px" src="/assets/images/logo.jpg" alt="" srcset="">
-        </div>
             <div class="text-center">
-                
+                <h1 class="text-center">Welcome to Career Solutions Job Portal</h1>
                 <h1>Recruiter Login Page</h1>
                     <form (ngSubmit)="onSubmit()">
 
@@ -26,13 +34,27 @@
                              required  name="password" type="password" matInput/><br> 
 
                         </mat-form-field><br>
-                        <button mat-raised-button color="accent" type="submit">Login</button>
-                        <button mat-raised-button color="accent"  routerLink="/signup">Signup</button>
+                        <button mat-raised-button type="submit">Login</button>
+                        <button mat-raised-button style="margin-left:30px" routerLink="/signup">Signup</button>
                     </form><br>
-                   <p> {{recruiter_credentials | json}}</p>
-            </div> 
+                </div>
+            </div>
         </div>
+    </div>
 </div>
+<div>
+<footer class="page-footer font-small blue">
+
+
+<div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
+</div>
+
+
+</footer>
+</div>
+</body>
+</html>
 
 
 

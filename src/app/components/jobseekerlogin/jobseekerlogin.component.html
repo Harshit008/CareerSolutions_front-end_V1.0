@@ -1,39 +1,111 @@
-<div class="bootstrap wrapper">
-    
-    <div class="container mt">
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+    <div class="hero-image ">
+        <div class="hero-text">
+            <div class="text-center" style="margin-top:250px">
+                <h1 class="text-center">Welcome to Career Solutions Job Portal</h1>
+                <div class="">
+                    <div class="bootstrap wrapper">
+
+                        <div class="container mt">
+
+
+                            <div class="text-center">
+
+                                <h1>Job Seeker Login Page</h1>
+                                <form (ngSubmit)="onSubmit()">
+
+                                    <mat-form-field class="full-width" appearance="outline">
+                                        <mat-label>Username</mat-label>
+
+                                        <input [(ngModel)]="jobSeeker_credentials.username" required name="username"
+                                            type="text" matInput /><br>
+
+                                    </mat-form-field><br>
+
+                                    <mat-form-field class="full-width" appearance="outline">
+
+                                        <mat-label>Password</mat-label>
+
+                                        <input [(ngModel)]="jobSeeker_credentials.password" required name="password"
+                                            type="password" matInput /><br>
+
+                                    </mat-form-field><br>
+                                    <button mat-raised-button type="submit">Login</button>
+                                    <button mat-raised-button style="margin-left:30px"
+                                        routerLink="/jobSeekerSignup">Signup</button>
+                                </form><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <footer class="page-footer font-small blue">
+
+
+            <div class="footer-copyright text-center py-3">© 2020 Copyright:
+                <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
+            </div>
+
+
+        </footer>
+    </div>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+</head>
+
+<body>
+    <div class="hero-image ">
+        <div class="hero-text">
+
         
-        <div class="container text-center form-group">
-            <img class="img-fluid" style="width: 200px" src="/assets/images/logo.jpg" alt="" srcset="">
-        </div>
-            <div class="text-center">
-                
-                <h1>Job Seeker Login Page</h1>
-                    <form (ngSubmit)="onSubmit()">
+        <div class="text-center" style="margin-top:250px">
+            <h1 class="text-center">Welcome to Career Solutions Job Portal</h1>
+            <div class="">
+                <h2>
 
-                        <mat-form-field class="full-width" appearance="outline">
-                            <mat-label>Username</mat-label>
-
-                            <input [(ngModel)]="jobSeeker_credentials.username"
-                            required name="username" type="text" matInput/><br>
-
-                        </mat-form-field><br>
-
-                        <mat-form-field class="full-width"  appearance="outline">
-
-                            <mat-label>Password</mat-label>
-
-                            <input [(ngModel)]="jobSeeker_credentials.password"
-                             required  name="password" type="password" matInput/><br> 
-
-                        </mat-form-field><br>
-                        <button mat-raised-button color="accent" type="submit">Login</button>
-                        <button mat-raised-button color="accent"  routerLink="/jobSeekerSignup">Signup</button>
-                    </form><br>
-                   <p> {{jobSeeker_credentials | json}}</p>
-            </div> 
-        </div>
-</div>
-
+                    Find the Job that fits your life<br>
+                    Ten million Success Stories.
+                    Start yours today
+                    
+                    
+                </h2>
+            </div>
+            <button mat-raised-button  routerLink="/login">Recruiter</button>
+            <button mat-raised-button  style="margin-left:30px"
+                routerLink="/jobseekerlogin">JobSeeker</button>
+        </div><br>
+        
+    </div>
+    </div>
+    <div>
+        <footer class="page-footer font-small blue">
+    
+            
+            <div class="footer-copyright text-center py-3">© 2020 Copyright:
+              <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
+            </div>
+          
+          
+          </footer></div>
+</body>
 
 
-
+</html> -->
