@@ -24,7 +24,7 @@
                         Apply for jobs here that matches your skills. After applying for job , Recruiter will contact
                         you by email.</marquee>
                     <div class="dt-responsive nowrap"></div>
-                    <!--  <input class="form-control" id="myInput" type="text" placeholder="Search.."><br>    -->
+                    <input type="text" style="width:90%" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
                     <table class="table table-bordered table-striped mb-0 ">
                         <tbody id="jobSeekerDashBoard" class="table table-striped table-hover">
                             <tr class="thead-light text-center">
@@ -59,7 +59,26 @@
 
                             </tr>
                     </table>
-
+                    <script>
+                        function myFunction() {
+                          var input, filter, table, tr, td, i, txtValue;
+                          input = document.getElementById("myInput");
+                          filter = input.value.toUpperCase();
+                          table = document.getElementById("jobSeekerDashBoard");
+                          tr = table.getElementsByTagName("tr");
+                          for (i = 0; i < tr.length; i++) {
+                            td = tr[i].getElementsByTagName("td")[0];
+                            if (td) {
+                              txtValue = td.textContent || td.innerText;
+                              if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].style.display = "";
+                              } else {
+                                tr[i].style.display = "none";
+                              }
+                            }       
+                          }
+                        }
+                        </script>
                 </div>
             </div>
         </div>
