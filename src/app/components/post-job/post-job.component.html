@@ -1,133 +1,111 @@
-<div class="bootstrap wrapper">
-    
-    <div class="container mt">
-        
-        <div class="container form-group">
-           
-            
-                <!-- <form (ngSubmit)="onSubmit()">
-                    <div class="form-group">
-                      <label for="jobTitle">Job Title</label>
-                      <input  [(ngModel)]="jobs.jobTitle"
-                      required name="jobTitle" type="text" class="form-control" placeholder="Enter Job Title">
-                    </div>
-                    <div class="form-group">
-                      <label for="jobField">Job Field</label>
-                      <input  [(ngModel)]="jobs.jobField"
-                      required name="jobField" type="text" class="form-control"  placeholder="Job Field">
-                    </div>
-                    <div class="form-group">
-                        <label for="jobDesc">Job Description</label>
-                        <input  [(ngModel)]="jobs.jobDesc"
-                        required name="jobDesc" type="text" class="form-control" placeholder="Job Description">
-                      </div>
+<!DOCTYPE html>
+<html>
 
-                      <div class="form-group">
-                        <label for="employementType">Employement Type</label>
-                        <input  [(ngModel)]="jobs.employementType"
-                        required name="employementType" type="text" class="form-control" placeholder="Employement Type">
-                      </div>
-                      
-                      <div class="form-group">
-                        <label for="ctc">CTC</label>
-                        <input  [(ngModel)]="jobs.ctc"
-                        required name="ctc" type="number" class="form-control" placeholder="CTC">
-                      </div>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-                      <div class="form-group">
-                        <label for="experienceInYears">Experience InYears</label>
-                        <input  [(ngModel)]="jobs.experienceInYears"
-                        required name="experienceInYears" type="number" class="form-control" placeholder="Experience In Years">
-                      </div>
-                     
-                      <div class="form-group">
-                        <label for="education">Education</label>
-                        <input  [(ngModel)]="jobs.education"
-                        required name="education" type="text" class="form-control" placeholder="Education">
-                      </div>
-                      
-                    <button type="submit" class="btn btn-primary">Post</button>
-                  </form>
-        
-        </div>
-    </div>
-</div> -->
-            
-        
-            <div class="margin-left">
-                
-                <h1>Post New Job</h1>
+</head>
+
+<body>
+  <div class="hero-image ">
+    <div class="hero-text">
+      <div class="bootstrap wrapper">
+
+        <div class="container mt">
+
+          <div class="text-center">
+            <h1 class="text-center">Welcome to Career Solutions Job Portal</h1>
+            <div class="bootstrap wrapper">
+
+              <div class="container mt">
+
+                <div class="container form-group">
+
+
+                  <div class="margin-left">
+
+                    <h1>Post New Job</h1>
                     <form (ngSubmit)="onSubmit()">
 
-                        <mat-form-field class="full-width" appearance="outline">
-                            <mat-label>Job Title</mat-label>
+                      <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Job Title</mat-label>
 
-                            <input [(ngModel)]="jobs_details.jobTitle"
-                            required name="jobTitle" type="text" matInput/><br>
+                        <input [(ngModel)]="jobs_details.jobTitle" required name="jobTitle" type="text" matInput /><br>
 
-                        </mat-form-field><br>
+                      </mat-form-field><br>
 
-                        <mat-form-field class="full-width" appearance="outline">
-                            <mat-label>Job Description</mat-label>
+                      <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Job Description</mat-label>
 
-                            <input [(ngModel)]="jobs_details.jobDesc"
-                            required name="jobDesc" type="text" matInput/><br>
+                        <input [(ngModel)]="jobs_details.jobDesc" required name="jobDesc" type="text" matInput /><br>
 
-                        </mat-form-field><br>
+                      </mat-form-field><br>
 
-                        <mat-form-field class="full-width"  appearance="outline">
+                      <mat-form-field class="full-width" appearance="outline">
 
-                            <mat-label>Job Field</mat-label>
+                        <mat-label>Job Field</mat-label>
 
-                            <input [(ngModel)]="jobs_details.jobField"
-                             required  name="jobField" type="text" matInput/><br> 
+                        <input [(ngModel)]="jobs_details.jobField" required name="jobField" type="text" matInput /><br>
 
-                        </mat-form-field><br>
+                      </mat-form-field><br>
 
-                        <mat-form-field class="full-width" appearance="outline">
-                            <mat-label>Employement Type</mat-label>
+                      <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Employement Type</mat-label>
 
-                            <input [(ngModel)]="jobs_details.employementType"
-                            required name="employementType" type="text" matInput/><br>
+                        <input [(ngModel)]="jobs_details.employementType" required name="employementType" type="text"
+                          matInput /><br>
 
-                        </mat-form-field><br>
+                      </mat-form-field><br>
 
-                        <mat-form-field class="full-width" appearance="outline">
-                            <mat-label>CTC</mat-label>
+                      <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>CTC</mat-label>
 
-                            <input [(ngModel)]="jobs_details.ctc"
-                            required name="ctc" type="number" matInput/><br>
+                        <input [(ngModel)]="jobs_details.ctc" required name="ctc" type="number" matInput /><br>
 
-                        </mat-form-field><br>
+                      </mat-form-field><br>
 
-                        <mat-form-field class="full-width" appearance="outline">
-                            <mat-label>Experience In Years</mat-label>
+                      <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Experience In Years</mat-label>
 
-                            <input [(ngModel)]="jobs_details.experienceInYears"
-                            required name="experienceInYears" type="number" matInput/><br>
+                        <input [(ngModel)]="jobs_details.experienceInYears" required name="experienceInYears"
+                          type="number" matInput /><br>
 
-                        </mat-form-field><br>
+                      </mat-form-field><br>
 
-                        <mat-form-field class="full-width" appearance="outline">
-                            <mat-label>Education</mat-label>
+                      <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Education</mat-label>
 
-                            <input [(ngModel)]="jobs_details.education"
-                            required name="education" type="text" matInput/><br>
+                        <input [(ngModel)]="jobs_details.education" required name="education" type="text"
+                          matInput /><br>
 
-                        </mat-form-field><br>
+                      </mat-form-field><br>
 
-                       
 
-                        <button mat-raised-button color="accent" type="submit">Post Job</button>
-                        <button mat-raised-button color="accent" style="margin-left: 20px;" type="reset">Reset</button>
-                    </form><br> 
-                   
+
+                      <button mat-raised-button type="submit">Post Job</button>
+                      <button mat-raised-button style="margin-left: 20px;" type="reset">Reset</button>
+                    </form><br>
+
                   </div>
-            </div> 
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-</div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <footer class="page-footer font-small blue">
 
 
+      <div class="footer-copyright text-center py-3">© 2020 Copyright:
+        <a href="http://career-solutions-job-portal.s3-website.ap-south-1.amazonaws.com/home"> careersolutions.com</a>
+      </div>
 
 
+    </footer>
+  </div>
+</body>
 
+</html>

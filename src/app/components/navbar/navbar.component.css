@@ -1,3 +1,10 @@
 .example-spacer{
  flex: auto;
 }
+.mat-toolbar.mat-primary {
+
+    background: #0d335d;
+
+    color: #fff;
+
+  }

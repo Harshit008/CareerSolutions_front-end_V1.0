@@ -1,86 +1,132 @@
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet"
-  href="//cdn.jsdelivr.net/gh/dmhendricks/bootstrap-grid-css@4.1.3/dist/css/bootstrap-grid.min.css" />
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<div class="bootstrap wrapper">
+<!DOCTYPE html>
+<html>
 
-  <div class="container mt">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet"
+    href="//cdn.jsdelivr.net/gh/dmhendricks/bootstrap-grid-css@4.1.3/dist/css/bootstrap-grid.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
 
-    <div class="container">
-      <h1>Edit Job</h1>
-    </div>
-    <div class="text-left">
+<body>
+  <div class="hero-image ">
+    <div class="hero-text">
+      <div class="bootstrap wrapper">
 
-      <form *ngIf="jobs" [formGroup]="form" (ngSubmit)="submit()">
-        <table>
-          <tbody>
-            <tr style="height: 41.4px;">
-              <td style="width: 255.8px; height: 22px;">&nbsp;<label for="jobTitle">Job Title</label></td>
-              <td style="width: 255.8px; height: 22px;">&nbsp;<input type="text" id="jobTitle"
-                  formControlName="jobTitle" size="30" /></td>
-              <div *ngIf="form.controls.jobTitle.errors?.required && form.controls.jobTitle.touched" class="error">
-              </div><br>
-            </tr>
+        <div class="container mt">
 
-            <tr style="height: 41.4px;">
-              <td style="width: 255.8px; height: 22px;">&nbsp;<label for="jobDesc">Job Description</label></td>
-              <td style="width: 255.8px; height: 22px;">&nbsp;<input id="jobDesc" formControlName="jobDesc" size="30" />
-              </td>
-              <div *ngIf="form.controls.jobDesc.errors?.required && form.controls.jobDesc.touched" class="error">
-              </div><br>
-            </tr>
+          <div class="text-center">
+
+            <div class="bootstrap wrapper">
+
+              <div class="container mt">
+
+                <div class="container">
+                  <h1>Edit Job</h1>
+                </div>
+                <div class="text-left">
+
+                  <form *ngIf="jobs" [formGroup]="form" (ngSubmit)="submit()">
+                    <table>
+                      <tbody>
+                        <tr style="height: 41.4px;">
+                          <td style="width: 255.8px; height: 22px;">&nbsp;<label for="jobTitle">Job Title</label></td>
+                          <td style="width: 255.8px; height: 22px;">&nbsp;<input type="text" id="jobTitle"
+                              formControlName="jobTitle" size="30" /></td>
+                          <div *ngIf="form.controls.jobTitle.errors?.required && form.controls.jobTitle.touched"
+                            class="error">
+                          </div><br>
+                        </tr>
+
+                        <tr style="height: 41.4px;">
+                          <td style="width: 255.8px; height: 22px;">&nbsp;<label for="jobDesc">Job Description</label>
+                          </td>
+                          <td style="width: 255.8px; height: 22px;">&nbsp;<input id="jobDesc" formControlName="jobDesc"
+                              size="30" />
+                          </td>
+                          <div *ngIf="form.controls.jobDesc.errors?.required && form.controls.jobDesc.touched"
+                            class="error">
+                          </div><br>
+                        </tr>
 
 
-            <tr style="height: 41.4px;">
-              <td style="width: 255.8px; height: 22px;">&nbsp;<label for="jobField">Job Field</label></td>
-              <td style="width: 255.8px; height: 22px;">&nbsp;<input type="text" id="jobField"
-                  formControlName="jobField" size="30" /></td>
-              <div *ngIf="form.controls.jobField.errors?.required && form.controls.jobField.touched" class="error">
-              </div><br>
-            </tr>
+                        <tr style="height: 41.4px;">
+                          <td style="width: 255.8px; height: 22px;">&nbsp;<label for="jobField">Job Field</label></td>
+                          <td style="width: 255.8px; height: 22px;">&nbsp;<input type="text" id="jobField"
+                              formControlName="jobField" size="30" /></td>
+                          <div *ngIf="form.controls.jobField.errors?.required && form.controls.jobField.touched"
+                            class="error">
+                          </div><br>
+                        </tr>
 
-            <tr style="height: 41.4px;">
-              <td style="width: 255.8px; height: 22px;">&nbsp;<label for="employementType">Employement Type</label></td>
-              <td style="width: 255.8px; height: 22px;">&nbsp;<input id="employementType"
-                  formControlName="employementType" size="30" /></td>
-              <div *ngIf="form.controls.employementType.errors?.required && form.controls.employementType.touched"
-                class="error">
-              </div><br>
-            </tr>
+                        <tr style="height: 41.4px;">
+                          <td style="width: 255.8px; height: 22px;">&nbsp;<label for="employementType">Employement
+                              Type</label></td>
+                          <td style="width: 255.8px; height: 22px;">&nbsp;<input id="employementType"
+                              formControlName="employementType" size="30" /></td>
+                          <div
+                            *ngIf="form.controls.employementType.errors?.required && form.controls.employementType.touched"
+                            class="error">
+                          </div><br>
+                        </tr>
 
-            <tr style="height: 41.4px;">
-              <td style="width: 255.8px; height: 22px;">&nbsp;<label for="ctc">CTC</label></td>
-              <td style="width: 255.8px; height: 22px;">&nbsp;<input id="ctc" formControlName="ctc" size="30" /></td>
-              <div *ngIf="form.controls.ctc.errors?.required && form.controls.ctc.touched" class="error">
-              </div><br>
-            </tr>
+                        <tr style="height: 41.4px;">
+                          <td style="width: 255.8px; height: 22px;">&nbsp;<label for="ctc">CTC</label></td>
+                          <td style="width: 255.8px; height: 22px;">&nbsp;<input id="ctc" formControlName="ctc"
+                              size="30" /></td>
+                          <div *ngIf="form.controls.ctc.errors?.required && form.controls.ctc.touched" class="error">
+                          </div><br>
+                        </tr>
 
-            <tr style="height: 41.4px;">
-              <td style="width: 255.8px; height: 22px;">&nbsp;<label for="experienceInYears">Experience In Years</label>
-              </td>
-              <td style="width: 255.8px; height: 22px;">&nbsp;<input id="experienceInYears"
-                  formControlName="experienceInYears" size="30" /></td>
-              <div *ngIf="form.controls.experienceInYears.errors?.required && form.controls.experienceInYears.touched"
-                class="error">
-              </div><br>
-            </tr>
+                        <tr style="height: 41.4px;">
+                          <td style="width: 255.8px; height: 22px;">&nbsp;<label for="experienceInYears">Experience In
+                              Years</label>
+                          </td>
+                          <td style="width: 255.8px; height: 22px;">&nbsp;<input id="experienceInYears"
+                              formControlName="experienceInYears" size="30" /></td>
+                          <div
+                            *ngIf="form.controls.experienceInYears.errors?.required && form.controls.experienceInYears.touched"
+                            class="error">
+                          </div><br>
+                        </tr>
 
-            <tr style="height: 41.4px;">
-              <td style="width: 255.8px; height: 22px;">&nbsp;<label for="education">Education</label></td>
-              <td style="width: 255.8px; height: 22px;">&nbsp;<input id="education" formControlName="education"
-                  size="30" /></td>
-              <div *ngIf="form.controls.education.errors?.required && form.controls.education.touched" class="error">
-              </div><br>
-            </tr>
-            <br>
-            <button mat-raised-button color="accent" type="submit">Save</button>
-          </tbody>
-        </table>
-      </form>
+                        <tr style="height: 41.4px;">
+                          <td style="width: 255.8px; height: 22px;">&nbsp;<label for="education">Education</label></td>
+                          <td style="width: 255.8px; height: 22px;">&nbsp;<input id="education"
+                              formControlName="education" size="30" /></td>
+                          <div *ngIf="form.controls.education.errors?.required && form.controls.education.touched"
+                            class="error">
+                          </div><br>
+                        </tr>
+                        <br>
+                        <button mat-raised-button type="submit">Save</button>
+                      </tbody>
+                    </table>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</div>
+  <div>
+    <footer class="page-footer font-small blue">
+
+
+      <div class="footer-copyright text-center py-3">© 2020 Copyright:
+        <a href="http://career-solutions-job-portal.s3-website.ap-south-1.amazonaws.com/home"> careersolutions.com</a>
+      </div>
+
+
+    </footer>
+  </div>
+</body>
+
+</html>
