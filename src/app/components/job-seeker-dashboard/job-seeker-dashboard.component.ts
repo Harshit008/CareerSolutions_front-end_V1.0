@@ -24,8 +24,7 @@ export class JobSeekerDashboardComponent implements OnInit {
         error=>{
           console.log(error);
         }
-      );
-     
+      );     
   }
 
   apply(jobId:string){
