@@ -99,4 +99,8 @@ export class JobServiceService {
     return this.http.get(`${this.apiurl}/downloadResume/${fileId}`);
   }
 
+  public hasApplied(jobId:string,jsusername:string){
+    return this.http.get<string>(`${this.apiurl}/hasApplied/${jobId}/${jsusername}`)
+  }
+
 }

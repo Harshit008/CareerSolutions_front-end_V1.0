@@ -1,58 +1,74 @@
-<div class="bootstrap wrapper">
-    
-    <div class="container mt">
-        
-        <div class="container text-center form-group">
-            <img class="img-fluid" style="width: 200px" src="/assets/images/logo.jpg" alt="" srcset="">
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="hero-image ">
+        <div class="hero-text">
+            <h1>Recruiter Signup Page</h1>
+            <form (ngSubmit)="onSubmit()">
+
+                <mat-form-field class="full-width" appearance="outline">
+                    <mat-label>Name</mat-label>
+
+                    <input [(ngModel)]="recruiter_details.recruiterName" required name="name" type="text"
+                        matInput /><br>
+
+                </mat-form-field><br>
+
+                <mat-form-field class="full-width" appearance="outline">
+                    <mat-label>Username</mat-label>
+
+                    <input [(ngModel)]="recruiter_details.username" required name="username" type="text" matInput /><br>
+
+                </mat-form-field><br>
+
+                <mat-form-field class="full-width" appearance="outline">
+
+                    <mat-label>Password</mat-label>
+
+                    <input [(ngModel)]="recruiter_details.password" required name="password" type="password"
+                        matInput /><br>
+
+                </mat-form-field><br>
+
+                <mat-form-field class="full-width" appearance="outline">
+                    <mat-label>Email</mat-label>
+
+                    <input [(ngModel)]="recruiter_details.email" required name="email" type="text" matInput /><br>
+
+                </mat-form-field><br>
+
+
+
+                <button mat-raised-button type="submit">Register</button>
+                <button mat-raised-button style="margin-left: 20px;"type="reset">Reset</button>
+            </form><br>
         </div>
-            <div class="text-center">
-                
-                <h1>Recruiter Signup Page</h1>
-                    <form (ngSubmit)="onSubmit()">
-
-                        <mat-form-field class="full-width" appearance="outline">
-                            <mat-label>Name</mat-label>
-
-                            <input [(ngModel)]="recruiter_details.recruiterName"
-                            required name="name" type="text" matInput/><br>
-
-                        </mat-form-field><br>
-
-                        <mat-form-field class="full-width" appearance="outline">
-                            <mat-label>Username</mat-label>
-
-                            <input [(ngModel)]="recruiter_details.username"
-                            required name="username" type="text" matInput/><br>
-
-                        </mat-form-field><br>
-
-                        <mat-form-field class="full-width"  appearance="outline">
-
-                            <mat-label>Password</mat-label>
-
-                            <input [(ngModel)]="recruiter_details.password"
-                             required  name="password" type="password" matInput/><br> 
-
-                        </mat-form-field><br>
-
-                        <mat-form-field class="full-width" appearance="outline">
-                            <mat-label>Email</mat-label>
-
-                            <input [(ngModel)]="recruiter_details.email"
-                            required name="email" type="text" matInput/><br>
-
-                        </mat-form-field><br>
-
-                       
-
-                        <button mat-raised-button color="accent" type="submit">Register</button>
-                        <button mat-raised-button color="accent"  type="reset">Reset</button>
-                    </form><br>
-                   <p> {{recruiter_details | json}}</p>
-            </div> 
-        </div>
-</div>
+    </div>
+    <div>
+        <footer class="page-footer font-small blue">
 
 
+            <div class="footer-copyright text-center py-3">© 2020 Copyright:
+                <a href="http://career-solutions-job-portal.s3-website.ap-south-1.amazonaws.com/home">
+                    careersolutions.com</a>
+            </div>
 
 
+        </footer>
+    </div>
+</body>
+
+</html>

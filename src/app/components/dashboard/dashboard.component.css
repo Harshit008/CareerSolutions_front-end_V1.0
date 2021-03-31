@@ -19,7 +19,7 @@ body,html {
 .hero-text {
     text-align: center;
     position: absolute;
-    top: 35%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: rgba(13, 34, 54, 0.857);

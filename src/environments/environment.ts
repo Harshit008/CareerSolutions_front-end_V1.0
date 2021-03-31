@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiBaseUrl:"http://careersolutionsbackendv1-env.eba-umxntpch.ap-south-1.elasticbeanstalk.com/myapp"
+  apiBaseUrl:"http://localhost:9999/myapp"
 };
 
 /*
